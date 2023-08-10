@@ -86,7 +86,7 @@ export const Register = () => {
             dispatch(signup(user, navigate))
         }
         else {
-            alert("Please enter the details..!!");
+            alert("Please enter the valid details..!!");
         }
     }
 

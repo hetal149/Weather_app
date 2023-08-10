@@ -7,7 +7,7 @@ export const signin = (formData, navigate) => async(dispatch) => {
 
         dispatch({ type: AUTH, data });
 
-        navigate('/ticket');
+        navigate('/home');
     } catch (error) {
         // console.log(error)
         dispatch({ type: 'USER_LOGIN_FAILED', payload: error.response.data })
@@ -20,7 +20,7 @@ export const signup = (formData, navigate) => async(dispatch) => {
         if (data) {
             alert("Registration successful")
         }
-        navigate('/login');
+        navigate('/');
     } catch (error) {
         // dispatch({ type: 'USER_SIGNUP_FAILED', payload:error.response.data})
         const a = error.response.data.errors;
