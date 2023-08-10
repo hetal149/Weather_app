@@ -23,7 +23,7 @@ export const signup = (formData, navigate) => async(dispatch) => {
         navigate('/');
     } catch (error) {
         // dispatch({ type: 'USER_SIGNUP_FAILED', payload:error.response.data})
-        const a = error.response.data.errors;
+        const a = error?.response?.data?.errors;
         if (a) {
             alert("Email is already exist")
         }
